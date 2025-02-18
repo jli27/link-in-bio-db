@@ -1,16 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Link-in-bio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+  <title>Jasmine Li's Links</title>
 
-  <body>
-    <%= yield %>
+  <style>
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background: url('https://i.ibb.co/nmsW880/a351218f8648d72677eeadc1303cd87f-fotor-20250112123239.jpg');
+    }
+
+    .pfp-image {
+      width: 175px;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+
+    .image-row {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .name {
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Courier New Bold', Courier, monospace;
+      font-size: 28px;
+      font: weight 800px;
+    }
+    
+    .main-container {
+      max-width: 640px;
+      margin: auto;
+    }
+
+    .socials {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .item {
+      background-color: rgb(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      border-radius: 200px;
+      padding: 4px 53px 5px 5px;
+      box-shadow: 2px 2px 10px 0px rgba(23, 77, 118, 0.48);
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      object-fit: cover;
+    }
+
+    .link-text {
+      text-align: center;
+      flex-grow: 1;
+      font-family: 'Courier New Bold', Courier, monospace;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class ="image-row">
+      <img src="https://static.wixstatic.com/media/f0bb90_f2ffa6cf499d467b87d71315d20f85a8~mv2.jpeg/v1/crop/x_118,y_469,w_748,h_749/fill/w_298,h_298,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jasmine.jpeg" alt="Jasmine Li Profile Picture" class="pfp-image">
+    </div>
+
+    <div class="name">
+      <em>Jasmine Li</em>
+    </div>
+
+    <div class="socials">
+      <a href="https://github.com/jli27" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://instagram.com/jas.li" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/jasmineli9/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+
+      <a href="https://pin.it/3v7pdFn8C" target="_blank">
+        <i class="fa-brands fa-pinterest"></i>
+      </a>
+    </div>
+
+    
+  </div>
+
+  <%= yield %>
+
   </body>
 </html>
